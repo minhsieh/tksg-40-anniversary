@@ -1,0 +1,588 @@
+<!DOCTYPE HTML>
+<html ng-app>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>淡江大學童軍團40週年暨財團法人剛毅童軍文教基金會15週年 慶祝活動網站</title>
+	        <!-- 基本meta定義 -->
+			<meta name="description" content="淡江大學童軍團即將邁入第40年了，同時也是財團法人剛毅童軍文教基金會15歲生日，本次團慶主旨「剛毅四十，邁向優質」，期望在這四十年的歲月之下，在大家一同努力之下，邁向更優質的複式童軍團。">
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+						
+			<!-- 臉書分享顯示定義 -->
+			<meta property="og:title" content="淡江大學童軍團40週年暨財團法人剛毅童軍文教基金會15週年 慶祝活動網站" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image" content="images/fb-share.jpg" />
+			<meta property="og:description" content="淡江大學童軍團即將邁入第40年了，同時也是財團法人剛毅童軍文教基金會15歲生日，本次團慶主旨「剛毅四十，邁向優質」，期望在這四十年的歲月之下，在大家一同努力之下，邁向更優質的複式童軍團。" />
+			
+			<!-- CSS引用外部 -->
+			<link rel="stylesheet" href="css/all.css" media="all">
+			
+			<!-- Angular引用 -->
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"></script>
+			
+			<!-- Awesome Font引用外部 -->
+			<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+			
+			<!-- 縮圖icon -->
+			<link rel="shortcut icon" href="images/favicon.ico" />
+			
+			<!-- 神之jQuery -->
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+			<script>window.jQuery || document.write('<script src="js/jquery-1.8.3.min.js"><\/script>')</script>
+			<script src="js/jquery.main.js"></script>
+				<!--[if lt IE 9]>
+					<link rel="stylesheet" href="css/ie.css" >
+					<script src="js/ie.js"></script>
+				<![endif]-->
+				<!--[if lt IE 10]><link rel="stylesheet" href="css/ie9.css" ><![endif]-->
+				<!--[if gte IE 9]>
+				  <style type="text/css">
+				    .gradient {
+				       filter: none;
+				    }
+				  </style>
+				<![endif]-->
+			
+			<!-- Color燈箱jQuery -->
+			<script src="js/jquery.colorbox.js" type="text/javascript"></script>
+			<link rel="stylesheet" type="text/css" href="css/colorbox.css">
+
+			<!-- Script 從25lab得到的Slide -->
+			<script type="text/javascript" src="sprout-slide/sprout-slide.js"></script>
+			<link type="text/css" rel="stylesheet" href="sprout-slide/sprout-slide.css">
+			<script type="text/javascript">
+			$(document).ready(function() {
+				// sproutSlide(element,width,slideNum,duration,autovalue,interval);
+				// element  : Slider's ID or class
+				// width    : Slider's width 
+				// slideNum : 'li' number per Page 
+				// duration : animation's speed
+				// autoplay : true or false
+				// interval : autoplay interval
+				sproutSlide('#slide1',1000,1,2000,true,3000);
+			});
+			</script>
+			
+			<!-- Script 浮動式選單 -->
+			<script type='text/javascript'>
+			$(function(){
+　				$(window).load(function(){
+　				　$(window).bind('scroll resize', function(){
+　				　var $this = $(this);
+				　　var $this_Top=$this.scrollTop();
+ 
+　					　if($this_Top < 100){
+　					　$('#top-bar').stop().animate({top:"-65px"});
+　					　　}
+　				　　　if($this_Top > 100){
+　				　　　$('#top-bar').stop().animate({top:"0px"});
+　　				　 }
+　					　}).scroll();
+　						});
+						});
+			</script>
+			
+			<!-- Script 動畫 for 8icon tada -->
+			<link rel="stylesheet" href="css/animate.css">
+			<script src="js/ani.js"></script>
+			<script>
+				$(function(){
+				$("#8icon").mouseover(function(){
+				$(this).addClass("animated pulse");		
+				}).mouseout(function(){
+				$(this).removeClass("animated pulse");
+				});;
+				});
+			</script>
+			
+			<!-- 勾選後出現表單 -->
+			<script>
+				$(function(){
+				$(".1p-form").hide();
+				$(".2p-form").hide();
+				$(".3p-form").hide();
+				$(".4p-form").hide();
+				$(".5p-form").hide();
+				$(".6p-form").hide();
+				$(".1moption").hide();
+				$(".2moption").hide();
+				$(".3moption").hide();
+				$(".4moption").hide();
+				$(".5moption").hide();
+				$(".6moption").hide();
+			
+				$(".ps").click(function(){
+					var id = $('input[name="peoples"]:checked').attr("id");
+					if(id == 1){
+						hideall();
+						$(".mdescription").hide();
+						$(".1p-form").slideDown();
+						$(".1moption").slideDown();
+					}
+					if(id == 2){ 
+						hideall();
+						$(".mdescription").hide();
+						$(".1p-form").slideDown();
+						$(".2p-form").slideDown();
+						$(".1moption").slideDown();
+						$(".2moption").slideDown();
+					}
+					if(id == 3){
+						hideall();
+						$(".mdescription").hide();
+						$(".1p-form").slideDown();
+						$(".2p-form").slideDown();
+						$(".3p-form").slideDown();
+						$(".1moption").slideDown();
+						$(".2moption").slideDown();
+						$(".3moption").slideDown();
+					}
+					if(id == 4){ 
+						hideall();
+						$(".mdescription").hide();
+						$(".1p-form").slideDown();
+						$(".2p-form").slideDown();
+						$(".3p-form").slideDown();
+						$(".4p-form").slideDown();
+						$(".1moption").slideDown();
+						$(".2moption").slideDown();
+						$(".3moption").slideDown();
+						$(".4moption").slideDown();
+					}
+					if(id == 5){
+						hideall();
+						$(".mdescription").hide();
+						$(".1p-form").slideDown();
+						$(".2p-form").slideDown();
+						$(".3p-form").slideDown();
+						$(".4p-form").slideDown();
+						$(".5p-form").slideDown();
+						$(".1moption").slideDown();
+						$(".2moption").slideDown();
+						$(".3moption").slideDown();
+						$(".4moption").slideDown();
+						$(".5moption").slideDown();
+					}
+					if(id == 6){
+						hideall();
+						$(".mdescription").hide();
+						$(".1p-form").slideDown();
+						$(".2p-form").slideDown();
+						$(".3p-form").slideDown();
+						$(".4p-form").slideDown();
+						$(".5p-form").slideDown();
+						$(".6p-form").slideDown();
+						$(".1moption").slideDown();
+						$(".2moption").slideDown();
+						$(".3moption").slideDown();
+						$(".4moption").slideDown();
+						$(".5moption").slideDown();
+						$(".6moption").slideDown();
+					}
+					
+				});	
+			});
+			
+			function hideall(){
+				$(".1p-form").hide();
+				$(".2p-form").hide();
+				$(".3p-form").hide();
+				$(".4p-form").hide();
+				$(".5p-form").hide();
+				$(".6p-form").hide();
+				$(".1moption").hide();
+				$(".2moption").hide();
+				$(".3moption").hide();
+				$(".4moption").hide();
+				$(".5moption").hide();
+				$(".6moption").hide();
+				};
+			</script>
+			
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo"><img src="images/40logo-white.png" width=30% style="margin-left:30px;"></div>
+		<!-- 選單Menu -->
+		<div id="top-bar">
+			<div id="menu">
+			<ul>
+				<li><a href="#" accesskey="3" title="">TOP</a></li>
+				<li><a href="index.html" accesskey="1" title="">首頁</a></li>
+				<li class="active"><a href="register.html" accesskey="2" title="">報名系統</a></li>
+				<li><a href="donate.html" accesskey="3" title="">捐款芳名錄</a></li>
+			</ul>
+			</div>
+		</div>
+
+		
+	</div>
+	</div>
+	<div id="banner">
+		<div class="container">
+			<!-- 頁首大標 -->
+			<div class="title">
+				<h2 style="font-size:20px;font-weight: bold;">淡江大學童軍團 40週年<br/>財團法人剛毅童軍文教基金會15週年</h2>
+				<span class="byline"style="font-weight: bold;">40th Anniversary</span> </div>
+				<h2 style="font-size:35px;font-weight: bold;">報名系統</h2>
+				<br/>
+			<div id="menu">
+			<ul>
+				<li><a href="index.html" accesskey="1" title="">回到頁首</a></li>
+				<li class="active"><a href="register.html" accesskey="2" title="">報名系統</a></li>
+				<li><a href="donate.html" accesskey="3" title="">捐款芳名錄</a></li>
+			</ul>
+			</div>	
+		</div>
+	</div>
+
+		<section class="intro-section">
+			<div class="intro">
+		    <h2 style="font-size:35px;">歡迎來到40週年團慶大露營報名系統</h2>
+			<img src="images/register/reg-01.png" style="width:75%;">
+			</div>
+		</section>
+		
+		
+		
+		<section class="gamification-section">
+			<!--<form method="post" action="check.php">	-->	
+			<div class="container">
+				<div class="gamification">
+					<button>Show lightbox</button>
+					<script type="text/javascript">
+					(function(){
+ $('button').on('click', function(){
+  $.colorbox({
+   html : '<h1>
+Hello lightbox!!!</h1>
+', //在燈箱中要顯示的html字段
+   width : 700, //燈箱中間區塊的寬度
+   height : 600, //燈箱中間區塊的高度
+   onClosed : function(){ //當燈箱關閉時的callback funtion
+    alert('Lightbox is closed');
+   }
+  });
+ });
+})();</script>
+					<h2 style="font-size:30px;font-weight: bold;">跟著史考特胖胖一步一步來吧!</h2><br/>
+				</div>
+				<!-- Step-1 -->
+				<div class="row order-anim conversely">
+					<div class="ico ico2 anim-box"><span><em><i>
+						<span data-picture data-alt="Step-1">
+							<span data-src="images/register/01.png" data-width="50" ></span>
+							<span data-src="images/register/01.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" data-width="50" ></span>
+							<!--[if (lt IE 9) & (!IEMobile)]>
+								<span data-src="images/food.png"></span>
+							<![endif]-->
+							<noscript><img src="images/register/01.png" width="50" alt="Step-1" ></noscript>
+						</span>
+					</i></em></span></div>
+					<div class="col-r pre-animation anim-box" id="col-4">
+						<div class="box">
+						圖XD
+						</div>
+					</div>
+					<div class="col-l pre-animation anim-box" id="col-3">
+						<h2 class="game">Step-1 找齊四個人</h2>
+						<p>本次40週年團慶大露營，有各式各樣的參與方式，如果你是參加露營的，建議可以找其四個人一起喔!</p>
+						<p>如果你是1人到6人，也可以直接報名。</p>
+					</div>
+				</div>
+				<!-- Step-2 -->
+				<div class="row order-anim conversely">
+					<div class="ico ico2 anim-box"><span><em><i>
+						<span data-picture data-alt="Step-2">
+							<span data-src="images/register/02.png" data-width="50" ></span>
+							<span data-src="images/register/02.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" data-width="50" ></span>
+							<!--[if (lt IE 9) & (!IEMobile)]>
+								<span data-src="images/food.png"></span>
+							<![endif]-->
+							<noscript><img src="images/register/02.png" width="50" alt="Step-2" ></noscript>
+						</span>
+					</i></em></span></div>
+					<div class="col-r pre-animation anim-box" id="col-4">
+						<div class="box" style="width:100%;">
+							<div class="form-reg">
+								<h2 class="game">參加形式：</h2><br/>
+								<input type="radio" id="camp" name="join-type">
+								<label for="camp" style="width:35%;margin:0px auto;">露營</label><br/>
+								<input type="radio" id="room" name="join-type">
+								<label for="room" style="width:35%;margin:0px auto;">住宿</label><br/>
+								<input type="radio" id="nostay" name="join-type">
+								<label for="nostay" style="width:35%;margin:0px auto;">不過夜</label>
+							</div>
+						</div>
+					</div>
+					<div class="col-l pre-animation anim-box" id="col-3">
+						<h2 class="game">Step-2 選擇參加形式</h2>
+						<p>這次大露營，有提供露營、住宿、非住宿等形式，供大家選擇。</p>
+						<p>露營：1000員/營位 每晚，須自備帳篷等。</p>
+						<p>住宿：參考我們找到附近的住宿地點，或是自行尋找。</p>
+					</div>
+				</div>
+				<!-- Step-3 -->
+				<div class="row order-anim conversely">
+					<div class="ico ico2 anim-box"><span><em><i>
+						<span data-picture data-alt="Step-3">
+							<span data-src="images/register/03.png" data-width="50" ></span>
+							<span data-src="images/register/03.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" data-width="50" ></span>
+							<!--[if (lt IE 9) & (!IEMobile)]>
+								<span data-src="images/food.png"></span>
+							<![endif]-->
+							<noscript><img src="images/register/03.png" width="50" alt="Step-3" ></noscript>
+						</span>
+					</i></em></span></div>
+					<div class="col-r pre-animation anim-box" id="col-4">
+						<div class="box" style="width:100%;">
+							<div class="form-reg">
+								<h2 class="game">參加時間：</h2><br/>
+								<input type="radio" id="1-3" name="join-date">
+								<label for="1-3" style="margin:0px auto;">8/1-8/3 三天全參加</label><br/>
+								<input type="radio" id="1-2" name="join-date">
+								<label for="1-2" style="margin:0px auto;">8/1-8/2 兩天</label><br/>
+								<input type="radio" id="2-3" name="join-date">
+								<label for="2-3" style="margin:0px auto;">8/2-8/3 兩天</label><br/>
+								<input type="radio" id="only1" name="join-date">
+								<label for="only1" style="margin:0px auto;">只參加一天 8/1</label><br/>
+								<input type="radio" id="only2" name="join-date">
+								<label for="only2" style="margin:0px auto;">只參加一天 8/2</label><br/>
+								<input type="radio" id="only3" name="join-date">
+								<label for="only3" style="margin:0px auto;">只參加一天 8/3</label>
+							</div>
+						</div>
+					</div>
+					<div class="col-l pre-animation anim-box" id="col-3">
+						<h2 class="game">Step-3 選擇你的參加時間</h2>
+						<p>活動日期：8/1(五)-8/3(天)</p>
+						<p>你可以選擇全程參與，或是來兩天一起與大家同樂。</p>
+						<p>報到時間：<br/>8/1(五) 13:00-15:00<br/>8/2(六) 10:00-12:00</p>
+					</div>
+				</div>
+				<!-- Step-4 -->
+				<div class="row order-anim">
+					<div class="ico ico1 anim-box"><span><em><i>
+						<span data-picture data-alt="Step-3">
+							<span data-src="images/register/04.png" data-width="50" ></span>
+							<span data-src="images/register/04.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" data-width="50" ></span>
+							<!--[if (lt IE 9) & (!IEMobile)]>
+								<span data-src="images/hotel.png"></span>
+							<![endif]-->
+							<noscript><img src="images/register/04.png" width="50"  alt="Step-3" ></noscript>
+						</span>
+					</i></em></span></div>
+					<div class="col-r pre-animation anim-box" id="col-2">
+						<div class="box">
+						<div class="req">
+							<div class="form-reg">
+								<h2 class="game">一起報名人數</h2><br/>
+								<input type="radio" id="1" name="peoples" class="ps">
+								<label for="1" style="display:inline-block;width:10%;padding: 5px 5px;">1</label>
+								<input type="radio" id="2" name="peoples" class="ps">
+								<label for="2" style="display:inline-block;width:10%;padding: 5px 5px;">2</label>
+								<input type="radio" id="3" name="peoples" class="ps">
+								<label for="3" style="display:inline-block;width:10%;padding: 5px 5px;">3</label>
+								<input type="radio" id="4" name="peoples" class="ps">
+								<label for="4" style="display:inline-block;width:10%;padding: 5px 5px;">4</label>
+								<input type="radio" id="5" name="peoples" class="ps">
+								<label for="5" style="display:inline-block;width:10%;padding: 5px 5px;">5</label>
+								<input type="radio" id="6" name="peoples" class="ps">
+								<label for="6" style="display:inline-block;width:10%;padding: 5px 5px;">6</label>
+							</div>
+							<div class="form" style="text-align:left;">
+							<div class="3form" style="margin:7px 0;">
+							
+							</div>
+							<div class="1p-form" style="margin:7px 0;text-align:left;">
+								<h2 class="game" style="font-size:20px;">主要連絡人</h2><br/>
+								<table>
+								<tr><td>姓名：</td><td><input type="text" ng-model="onename" id="1.name"  name="1.name" /></td></tr>
+								<tr><td>性別：</td><td>
+								<div class="form-reg">
+								<input type="radio" id="1.male" name="1.sex">
+								<label for="1.male" style="display:inline-block;width:20%;padding: 5px 5px;">男</label>
+								<input type="radio" id="1.female" name="1.sex">
+								<label for="1.female" style="display:inline-block;width:20%;padding: 5px 5px;">女</label></div></td></tr>
+								<tr><td>身分證字號：</td><td><input type="text" id="1.idno" name="1.idno" /></td></tr>
+								<tr><td>生日：</td><td><input type="text" id="1.bir" name="1.bir" /></td></tr>
+								<tr><td>手機：</td><td><input type="text" id="1.tel" name="1.tel" /></td></tr>
+								<tr><td>保險受益人：</td><td><input type="text" id="1.pro" name="1.pro" /></td></tr>
+								<tr><td>電子信箱：</td><td><input type="text" id="1.email" name="1.email" /></td></tr>
+								</table>
+							</div>
+							<div class="2p-form" style="margin:7px 0;text-align:left;">
+							<h2 class="game" style="font-size:20px;">第二位</h2><br/>
+								<table>
+								<tr><td>姓名：</td><td><input type="text" ng-model="twoname" id="2.name" name="2.name" /></td></tr>
+								<tr><td>性別：</td><td>
+								<div class="form-reg">
+								<input type="radio" id="2.male" name="2.sex">
+								<label for="2.male" style="display:inline-block;width:20%;padding: 5px 5px;">男</label>
+								<input type="radio" id="2.female" name="2.sex">
+								<label for="2.female" style="display:inline-block;width:20%;padding: 5px 5px;">女</label></div></td></tr>
+								<tr><td>身分證字號：</td><td><input type="text" id="2.idno" name="2.idno" /></td></tr>
+								<tr><td>生日：</td><td><input type="text" id="2.bir" name="2.bir" /></td></tr>
+								<tr><td>手機：</td><td><input type="text" id="2.tel" name="2.tel" /></td></tr>
+								<tr><td>保險受益人：</td><td><input type="text" id="2.pro" name="2.pro" /></td></tr>
+								</table>
+							</div>
+							<div class="3p-form" style="margin:7px 0;text-align:left;">
+							<h2 class="game" style="font-size:20px;">第三位</h2><br/>
+								<table>
+								<tr><td>姓名：</td><td><input type="text" ng-model="threename" id="3.name" name="3.name" /></td></tr>
+								<tr><td>性別：</td><td>
+								<div class="form-reg">
+								<input type="radio" id="3.male" name="3.sex">
+								<label for="3.male" style="display:inline-block;width:20%;padding: 5px 5px;">男</label>
+								<input type="radio" id="3.female" name="3.sex">
+								<label for="3.female" style="display:inline-block;width:20%;padding: 5px 5px;">女</label></div></td></tr>
+								<tr><td>身分證字號：</td><td><input type="text" id="3.idno" name="3.idno" /></td></tr>
+								<tr><td>生日：</td><td><input type="text" id="3.bir" name="3.bir" /></td></tr>
+								<tr><td>手機：</td><td><input type="text" id="3.tel" name="3.tel" /></td></tr>
+								<tr><td>保險受益人：</td><td><input type="text" id="3.pro" name="3.pro" /></td></tr>
+								</table>
+							</div>
+							<div class="4p-form" style="margin:7px 0;text-align:left;">
+							<h2 class="game" style="font-size:20px;">第四位</h2><br/>
+								<table>
+								<tr><td>姓名：</td><td><input type="text" ng-model="fourname" id="4.name" name="4.name" /></td></tr>
+								<tr><td>性別：</td><td>
+								<div class="form-reg">
+								<input type="radio" id="4.male" name="4.sex">
+								<label for="4.male" style="display:inline-block;width:20%;padding: 5px 5px;">男</label>
+								<input type="radio" id="4.female" name="4.sex">
+								<label for="4.female" style="display:inline-block;width:20%;padding: 5px 5px;">女</label></div></td></tr>
+								<tr><td>身分證字號：</td><td><input type="text" id="4.idno" name="4.idno" /></td></tr>
+								<tr><td>生日：</td><td><input type="text" id="4.bir" name="4.bir" /></td></tr>
+								<tr><td>手機：</td><td><input type="text" id="4.tel" name="4.tel" /></td></tr>
+								<tr><td>保險受益人：</td><td><input type="text" id="4.pro" name="4.pro" /></td></tr>
+								</table>
+							</div>
+							<div class="5p-form" style="margin:7px 0;text-align:left;">
+							<h2 class="game" style="font-size:20px;">第五位</h2><br/>
+								<table>
+								<tr><td>姓名：</td><td><input type="text" ng-model="fivename"id="5.name" name="5.name" /></td></tr>
+								<tr><td>性別：</td><td>
+								<div class="form-reg">
+								<input type="radio" id="5.male" name="5.sex">
+								<label for="5.male" style="display:inline-block;width:20%;padding: 5px 5px;">男</label>
+								<input type="radio" id="5.female" name="5.sex">
+								<label for="5.female" style="display:inline-block;width:20%;padding: 5px 5px;">女</label></div></td></tr>
+								<tr><td>身分證字號：</td><td><input type="text" id="5.idno" name="5.idno" /></td></tr>
+								<tr><td>生日：</td><td><input type="text" id="5.bir" name="5.bir" /></td></tr>
+								<tr><td>手機：</td><td><input type="text" id="5.tel" name="5.tel" /></td></tr>
+								<tr><td>保險受益人：</td><td><input type="text" id="5.pro" name="5.pro" /></td></tr>
+								</table>
+							</div>
+							<div class="6p-form" style="margin:7px 0;text-align:left;">
+							<h2 class="game" style="font-size:20px;">第六位</h2><br/>
+								<table>
+								<tr><td>姓名：</td><td><input type="text" ng-model="sixname" id="6.name" name="6.name"/></td></tr>
+								<tr><td>性別：</td><td>
+								<div class="form-reg">
+								<input type="radio" id="6.male" name="6.sex">
+								<label for="6.male" style="display:inline-block;width:20%;padding: 5px 5px;">男</label>
+								<input type="radio" id="6.female" name="6.sex">
+								<label for="6.female" style="display:inline-block;width:20%;padding: 5px 5px;">女</label></div></td></tr>
+								<tr><td>身分證字號：</td><td><input type="text" id="6.idno" name="6.idno" /></td></tr>
+								<tr><td>生日：</td><td><input type="text" id="6.bir" name="6.bir" /></td></tr>
+								<tr><td>手機：</td><td><input type="text" id="6.tel" name="6.tel" /></td></tr>
+								<tr><td>保險受益人：</td><td><input type="text" id="6.pro" name="6.pro" /></td></tr>
+								</table>
+							</div>
+							<br/><br/>
+							<p>其他報名備註事項(如有特殊需求，或是成員特殊疾病需備註，請於此註記，謝謝)<br/>
+							<textarea name="remark" id="remark"></textarea></p>
+							</div>
+						</div>
+						
+						</div>
+					</div>
+					<div class="col-l pre-animation anim-box" id="col-1">
+						<h2 class="game">Step-4 輸入參加人員資料</h2>
+						<p>現在請輸入參加人員資料，依照你找到的同行人數選擇「一起報名人數」。</p>
+						<p>這位伙伴在大露營之前，會是我們聯繫的管道喔。</p>
+					</div>
+				</div>
+				<!-- Step-5 -->
+				<div class="row order-anim conversely">
+					<div class="ico ico2 anim-box"><span><em><i>
+						<span data-picture data-alt="Step-2">
+							<span data-src="images/register/05.png" data-width="50" ></span>
+							<span data-src="images/register/05.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" data-width="50" ></span>
+							<!--[if (lt IE 9) & (!IEMobile)]>
+								<span data-src="images/food.png"></span>
+							<![endif]-->
+							<noscript><img src="images/register/05.png" width="50" alt="Step-2" ></noscript>
+						</span>
+					</i></em></span></div>
+					<div class="col-r pre-animation anim-box" id="col-4">
+						<div class="box" style="width:100%;">
+							<h2 class="game">要參加模組活動</h2>
+							<div class="form-reg">
+								<input type="checkbox" id="1m" name="mjoin">
+								<label for="1m" style="margin:0px auto;" class="1moption">{{ onename }}</label><br/>
+								<input type="checkbox" id="2m" name="mjoin">
+								<label for="2m" style="margin:0px auto;" class="2moption">{{ twoname }}</label><br/>
+								<input type="checkbox" id="3m" name="mjoin">
+								<label for="3m" style="margin:0px auto;" class="3moption">{{ threename }}</label><br/>
+								<input type="checkbox" id="4m" name="mjoin">
+								<label for="4m" style="margin:0px auto;" class="4moption">{{ fourname }}</label><br/>
+								<input type="checkbox" id="5m" name="mjoin">
+								<label for="5m" style="margin:0px auto;" class="5moption">{{ fivename }}</label><br/>
+								<input type="checkbox" id="6m" name="mjoin">
+								<label for="6m" style="margin:0px auto;" class="6moption">{{ sixname }}</label>
+								<p class="mdescription">請先填完上一步驟的個人資料後，才可以填寫此欄喔!</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-l pre-animation anim-box" id="col-3">
+						<h2 class="game">Step-5 選擇是否參加模組活動</h2>
+						<p>想體驗國際級大露營一樣的模組活動嗎?有水上活動、陸上工作坊，大人小孩都能玩。</p>
+						<p></p>
+						<p>模組活動費用：500元/每人</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="expense-section">
+			<div class="container">
+				<p>
+				本次費用總計：       元整。
+				</p>
+			</div>
+		</section>
+		
+		<section class="more-section">
+			<div class="container">
+				<button type="submit" class="btn btn-5 btn-5a icon-envelope-2" onclick=""><span>填完了!</span></button>
+			</div>
+		<!--</form>-->
+		</section>
+	</div>
+	<footer id="footer">
+		<div class="footer-section">
+			<p class="leftfooter">&copy; 2014 Scouts Group of Tamkang University.</p>
+			<p class="rightfooter">
+			
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="margin:0px auto">
+<a class="a2a_dd" href="http://www.addtoany.com/share_save"style="margin:0px auto"></a>
+<a class="a2a_button_facebook"style="margin:0px auto"></a>
+<a class="a2a_button_twitter"style="margin:0px auto"></a>
+<a class="a2a_button_google_plus"style="margin:0px auto"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+</p>
+		</div>
+	</footer>
+	
+</body>
+</html>
